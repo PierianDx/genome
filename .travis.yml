@@ -1,0 +1,24 @@
+sudo: required
+language: node_js
+node_js:
+  - "8"
+
+jobs:
+  include:
+    - stage: install
+      script: npm install
+      skip_cleanup: true
+    - stage: test
+      script: npn run report:coverage
+      skip_cleanup: true
+    # Define the release stage that runs semantic-release
+    - stage: release
+      node_js: lts/*
+      # Advanced: optionally overwrite your default `script` step to skip the tests
+      # script: skip
+      deploy:
+        provider: script
+        skip_cleanup: true
+        script:
+          - npx semantic-release
+      if: branch = master

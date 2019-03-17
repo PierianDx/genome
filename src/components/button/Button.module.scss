@@ -1,0 +1,12 @@
+:global {
+  @import "../utils.scss";
+  @import "~bulma/sass/elements/button.sass";
+
+  .delete {
+    @include delete;
+  }
+
+  .button {
+    box-sizing: border-box;
+  }
+}

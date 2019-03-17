@@ -1,0 +1,21 @@
+---
+name: Button
+---
+
+import { Playground, PropsTable } from "docz";
+import Button, { Button as ButtonWithProps } from "./Button";
+
+# Button
+
+This is a `Button` component.
+
+<PropsTable of={ButtonWithProps} />
+
+## Basic Usage
+
+<Playground>
+  <div className="buttons">
+    <Button>Push Me</Button>
+    <Button className="is-primary">Primary Button</Button>
+  </div>
+</Playground>
