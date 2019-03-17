@@ -1,7 +1,7 @@
 sudo: required
 language: node_js
 node_js:
-  - "8"
+  - '8'
 
 jobs:
   include:
@@ -9,7 +9,7 @@ jobs:
       script: npm install
       skip_cleanup: true
     - stage: test
-      script: npn run report:coverage
+      script: npm run report:coverage
       skip_cleanup: true
     # Define the release stage that runs semantic-release
     - stage: release
